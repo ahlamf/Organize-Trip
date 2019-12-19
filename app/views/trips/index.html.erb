@@ -2,17 +2,13 @@
 
 <h1>Trips</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Pictures</th>
+      
       <th>Title</th>
       <th>City</th>
       <th>Country</th>
-      <th>Day</th>
-      <th>Accommadation</th>
-      <th>Transportation</th>
-      <th>Detail</th>
       <th>Price</th>
       <th colspan="3"></th>
     </tr>
@@ -21,14 +17,9 @@
   <tbody>
     <% @trips.each do |trip| %>
       <tr>
-        <td><%= trip.pictures %></td>
         <td><%= trip.title %></td>
         <td><%= trip.city %></td>
         <td><%= trip.country %></td>
-        <td><%= trip.Day %></td>
-        <td><%= trip.accommadation %></td>
-        <td><%= trip.transportation %></td>
-        <td><%= trip.detail %></td>
         <td><%= trip.price %></td>
         <td><%= link_to 'Show', trip %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>

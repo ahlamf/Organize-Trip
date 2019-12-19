@@ -10,11 +10,18 @@
   </head>
 
   <body>
+  <% if ["public", "devise", "seeions"].include?(controller.controller_name) %>
 <header>
 <%= render "layouts/navbar/nav"%>
 </header>
+<%else%>
+<%= render "layouts/navbar/nav"%>
+<%= render "layouts/navbar/dashboard"%>
+<%end%>
+
    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+   <p class="alert"><%= alert %></p>
+
     <%= yield %>
 
 <%= render "layouts/navbar/footer"%>
