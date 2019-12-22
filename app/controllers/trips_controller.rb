@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_account!, only: [:new, :create, :destroy]
-
+  
   # GET /trips
   # GET /trips.json
   def index
@@ -71,6 +71,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:pictures, :title, :city, :country, :Day, :accommadation, :transportation, :detail, :price)
+      params.require(:trip).permit(:title, :city, :country, :price)
     end
 end

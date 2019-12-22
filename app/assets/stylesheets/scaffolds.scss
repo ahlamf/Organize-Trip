@@ -1,7 +1,35 @@
+
 body {
-  background-color: #fff;
+  background-color: rgb(141, 138, 138);
+  background-image: image-url('travel-planner.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #333;
   margin: 33px; }
+  nav {
+    background-image: image-url('nav.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-weight: 300;
+    color: black;
+    
+  }
+  .jumbotron{
+    // background-color: rgba(196, 155, 128, 0.516);
+    background-image: image-url('nav.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: medium;
+    font-weight: 300;
+    color: black;
+  }
+  .trips{
+   
+    background-color:rgb(241, 218, 171);
+    font-size: medium;
+    font-weight: 300;
+    color: black;
+  }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -63,3 +91,4 @@ div.actions {
 
 label {
   display: block; }
+

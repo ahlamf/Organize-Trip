@@ -1,5 +1,6 @@
 <%= form_with(model: trip, local: true) do |form| %>
   <% if trip.errors.any? %>
+  <div class="trips">
     <div id="error_explanation">
       <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
 
@@ -11,7 +12,11 @@
     </div>
   <% end %>
 
-  
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+    <%= form.hidden_field :photo_cache %>
+  </div>
 
   <div class="field">
     <%= form.label :title %>
@@ -35,5 +40,6 @@
 
   <div class="actions">
     <%= form.submit %>
+    </div>
   </div>
 <% end %>
